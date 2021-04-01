@@ -61,6 +61,7 @@ This repository includes the following files:
 ## Installation
 
 - virtual environment: python 3.7
+- used editor: jupyter notebook
 - pandas                    1.2.3
 - numpy                     1.19.2
 - matplotlib                3.3.4
