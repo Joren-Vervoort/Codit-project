@@ -27,9 +27,7 @@ The company has collected audio samples of equipment working on normal and anoma
 
 The implementation of this model can allow Acme to operate the manufacturing equipment at full capacity and detect signs of failure before the damage is so critical that the production line has to be stopped.
 
-Your mission is to build a machine learning model for Acme so they can continue their manufacturing activities and help the Coyote to catch the roadrunner.
-
-![ACME (GIF)](https://media.giphy.com/media/UjnsYcfFRZDm8/giphy.gif)
+Your mission is to build a machine learning model for Acme so they can continue their manufacturing activities.
 
 ### Must-have features
 
@@ -38,72 +36,34 @@ Your mission is to build a machine learning model for Acme so they can continue 
 - The performance metrics of the model must be clearly defined.
 - Evaluation of the model's performance and definition of its limitations
 
-### Miscellaneous information
 
-The dataset can be downloaded on the following link:
+## Description
 
-- [Machine Condition Monitoring](https://zenodo.org/record/3384388#.YFIrNXnvJEY)
+This repository includes the following files:
+- README.md
+- 
 
-Sound is best analysed with spectrograms, more specifically MelSpectograms. A good explanation can be found here: 
+## Installation
 
-[Mel Spectograms](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53)
-
-A Recommended Python library to work with Mel spectrograms is ***Librosa***.
-
-### Constraints
-
-- Create **functions**, do **not** create a single huge script
-- Each **function** has to be typed
-- Your code should be **commented**
-- Your code should be **cleaned of any commented unused code**.
-
-## Deliverables
-
-1. Publish your source code on the GitHub repository.
-2. **Small presentation (15 minutes + 5 minutes Q&A) about your findings**
-3. Dashboard representative of data insights
-4. Pimp up the README file:
-   - Description
-   - Installation
-   - Usage
-   - ⚠️**DATA SOURCES**
-   - (Visuals)
-   - (Contributors)
-   - (Timeline)
-   - (Personal situation)
-
-## Evaluation criteria
-
-### Technical
-
-- Publish clean and readable code on Github.
-- README has the format specified in the #Deliverables section
-- An EDA (Exploratory Data Analysis) was performed
-- The data was cleaned and preprocessed
-- The choice of performance metrics can be explained
-- The choice of model can be explained
-- The results and limitations of the model can be explained
-- The effects of overfitting or underfitting were studied and corrected
-
-### Soft-skills
-
-- Communication with the client was prioritized to understand his needs
-- Project steps were enumerated and tasks were dispatched
-- Time available was managed well
-- Each member of the team worked towards project completeness
-- Constant communication within the team was achieved
-
-### Final presentation
-
-- Slides are not too cluttered
-- The text on the slides is not read out loud
-- Presentation is tailored to the audience
-- Every group member understood each part of the project
-- Body language and intonation were professional
-
-## A final note of encouragement
-
-"Attempts to create thinking machines will be a great help to discovering how we think ourselves"
+environment setup: python 3.7
+packages to be installed:
 
 
-![Let's do it(GIF)](https://media.giphy.com/media/efPA2YD9BFWS30GJ5v/giphy.gif)
+## How to use
+
+## Implementation
+
+## The process
+
+### Downloading the datasets
+
+### Pre-processing
+
+### Machine Learning model selection
+
+### Result evalution
+
+
+
+THANK YOU FOR READING!
+
