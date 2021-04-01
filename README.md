@@ -4,6 +4,7 @@
 - Duration: `2 weeks`
 - Deadline : `02/04/2021 09:00 AM`
 - Team challenge: Group project
+- Contributers: Regis Schulze & Joren Vervoort
 
 ## Mission objectives
 
