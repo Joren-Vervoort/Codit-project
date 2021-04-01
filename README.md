@@ -43,7 +43,7 @@ This repository includes the following files:
 - README.md
 - Preprocessing.ipynb
 - ML feature & model selection.ipynb
-- ML predictor
+- ML_predictor.ipynb
 - Librosa_features (map)
     - Librosa_features_fan_-6dB.csv
     - Librosa_features_fan_0dB.csv
@@ -73,7 +73,7 @@ This repository includes the following files:
 
 ## How to use
 
-The machine learning model is trained and saved in the file XXXXXX. If the user loads the .wav file and specifies the type of machine, the ML model wil predict if a machine is either running normal or abnormal.
+The machine learning model is trained and saved in the file ML_predictor.ipynb. If the user loads the .wav file and specifies the type of machine, the ML model wil predict if a machine is either running normal or abnormal.
 
 ## Implementation
 
