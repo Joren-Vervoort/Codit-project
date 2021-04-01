@@ -62,14 +62,14 @@ This repository includes the following files:
 
 - virtual environment: python 3.7
 
-- packages -------------- version
-- pandas                    1.2.3
-- numpy                     1.19.2
-- matplotlib                3.3.4
-- scikit-learn              0.24.1
-- imbalanced-learn          0.8.0
-- librosa                   0.8.0
-- pickleshare               0.7.5
+ packages -------------- version
+ pandas                    1.2.3
+ numpy                     1.19.2
+ matplotlib                3.3.4
+ scikit-learn              0.24.1
+ imbalanced-learn          0.8.0
+ librosa                   0.8.0
+ pickleshare               0.7.5
 
 
 ## How to use
