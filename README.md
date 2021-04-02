@@ -121,10 +121,6 @@ In the Preprocessing.ipynb file the different features of the .wav files are ext
 
 Here we test under- and oversampling on each machine. Our results showed that undersampling gave better results. So we focused on these ones to be able to create our final jupyter notebook 'ML feature & model selection.ipynb'. 
 
-The final steps of making the data 'machine-learn-ready' is to concatenate the different noise levels per machine and to balance the dataframe. Because of the imbalance in the dataset, undersampling is applied to balance the data. After this the data is split into a train, test and validation set. 
-
-First a pipeline is created. The different classifiers that will be tested are added and fitted one by one. For each of the classifiers RFE (recursive feature elimination) is  applied to get the most important feateres for each model and a cross_validation is applied to combat overfitting. After checking the metrics using a classification report (precision, recall and f1-score), the best classifiers are hand-picked and selected.
-
 ### Machine Learning model selection
 
 The final steps of making the data 'machine-learn-ready' is to concatenate the different noise levels per machine and to balance the dataframe. Because of the imbalance in the dataset, undersampling is applied to balance the data. After this the data is split into a train, test and validation set. 
