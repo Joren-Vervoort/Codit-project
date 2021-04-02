@@ -121,7 +121,7 @@ Now the model is ready to use to predict if a machine is running normal or abnor
 
 ### Result evalution
 
-With a high precision, recall and f1-score, the model seems to perform good. Altough the data should be tested on predicting extra .wav files to be sure. Also extra noise levels could be added to recreate a more realistic scenario. The best way to create an even more accurate model is ofcourse to work with a more balanced dataset (normal and abnormal running machines), more .wav file and more units of each machine.
+With a high precision, recall and f1-score, the model seems to perform good. We only tested the final version on the DecisionTreeClassifier and the RandomForestClassifier. More classifiers could be added to find a more suited one. A hyperparameter tuning of the machine learning models could also slightly increase the scores. Overall the model should be tested on predicting extra .wav files to be sure. Also extra noise levels could be added to recreate a more realistic scenario. The best way to create an even more accurate model is ofcourse to work with a more balanced dataset (normal and abnormal running machines), more and more realistic .wav file and more units of each machine.
 
 Also given extra time a model could be trained to detect the different kind of failiures so the maintenance engineers are better informed before they check out the abnormal running machines. 
 
