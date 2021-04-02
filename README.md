@@ -44,7 +44,6 @@ This repository includes the following files:
 - README.md
 - Preprocessing.ipynb
 - ML feature & model selection.ipynb
-- ML_predictor.ipynb
 - fan basic row approach oversampling
 - fan basic row approach undersampling
 - pump basic row approach oversampling
@@ -82,7 +81,7 @@ This repository includes the following files:
 
 ## How to use
 
-The machine learning model is trained and saved in the file ML_predictor.ipynb. If the user loads the .wav file and specifies the type of machine, the ML model wil predict if a machine is either running normal or abnormal.
+The machine learning model is trained and saved in the file "ML feature & model selection.ipynb". The next step would be to create a new file and load the model and functions that where needed. This would make the model easier to use. If the user loads the .wav file and specifies the type of machine, the ML model wil predict if a machine is either running normal or abnormal.
 
 ## Implementation
 
