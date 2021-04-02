@@ -45,6 +45,14 @@ This repository includes the following files:
 - Preprocessing.ipynb
 - ML feature & model selection.ipynb
 - ML_predictor.ipynb
+- fan basic row approach oversampling
+- fan basic row approach undersampling
+- pump basic row approach oversampling
+- pump basic row approach undersampling
+- slider basic row approach oversampling
+- slider basic row approach undersampling
+- valve basic row approach oversampling
+- valve basic row approach undersampling
 - Librosa_features (map)
     - Librosa_features_fan_-6dB.csv
     - Librosa_features_fan_0dB.csv
@@ -110,6 +118,13 @@ In the Preprocessing.ipynb file the different features of the .wav files are ext
 - Librosa_features_valve_0dB.csv
 - Librosa_features_valve_6dB.csv
 
+### Basic row approach undersampling / oversampling
+
+Here we test under- and oversampling on each machine. Our results showed that undersampling gave better results. So we focused on these ones to be able to create our final jupyter notebook 'ML feature & model selection.ipynb'. 
+
+The final steps of making the data 'machine-learn-ready' is to concatenate the different noise levels per machine and to balance the dataframe. Because of the imbalance in the dataset, undersampling is applied to balance the data. After this the data is split into a train, test and validation set. 
+
+First a pipeline is created. The different classifiers that will be tested are added and fitted one by one. For each of the classifiers RFE (recursive feature elimination) is  applied to get the most important feateres for each model and a cross_validation is applied to combat overfitting. After checking the metrics using a classification report (precision, recall and f1-score), the best classifiers are hand-picked and selected.
 
 ### Machine Learning model selection
 
