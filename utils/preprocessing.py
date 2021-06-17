@@ -29,13 +29,7 @@ def extract_features(file):
     S, phase = librosa.magphase(librosa.stft(y=y))
 
     # features for the DataFrame
-    # chroma features have pitch which is probably not usefull
-    chroma_stft = np.mean(librosa.feature.chroma_stft(y=y, sr=sr))
-
-    chroma_cqt = np.mean(librosa.feature.chroma_cqt(y=y, sr=sr))
-
-    chroma_cens = np.mean(librosa.feature.chroma_cens(y=y, sr=sr))
-
+    
     melspectrogram = np.mean(librosa.feature.melspectrogram(y=y, sr=sr, S=S))
     melspectrogram_min = np.min(librosa.feature.melspectrogram(y=y, sr=sr, S=S))
     melspectrogram_max = np.max(librosa.feature.melspectrogram(y=y, sr=sr, S=S))
@@ -66,11 +60,6 @@ def extract_features(file):
     #he bins below. This can be used to, e.g., approximate the maximum (or minimum) frequency by setting roll_percent 
     #to a value close to 1 (or 0). Rolloff with rolloff coefficient 0.01 seems to be the same for (ab)normal
     spectral_rolloff = np.mean(librosa.feature.spectral_rolloff(y=y, sr=sr, S=S))
-
-    # get coefficients of fitting an nth-order polynomial to the columns of a spectrogram
-    poly_features = np.mean(librosa.feature.poly_features(y=y, sr=sr, S=S))
-    
-    tonnetz = np.mean(librosa.feature.tonnetz(y=y, sr=sr))
     
     zero_crossing_rate = np.mean(librosa.feature.zero_crossing_rate(y=y))
 
@@ -94,41 +83,47 @@ def extract_features(file):
 def create_csv(machine, dB_level):
 
     """
-    Function to extract features of a single .wav file
-    : attrib file
-    This function will return a dataframe of the extracted features of the selected .wav file
+    Function create a .csv file out of all the .wav files of a certain machine 
+    (fan, slider, pump or valve) with added noise on a certain dB level (-6, 0, 6)
+    : attrib machine, dB_level
+    This function will automatically save .csv file with the extracted features per .wav file
     """
-    
+
     # start measuring excecution time
     start_time = time.time()
-    #create empty list that will be filled with pathnames
-    #find paths normal wav files
+
+    # create empty list that will be filled with pathnames
     list_normal_6 = []
     num=[0,2,4,6]
+
+    # find paths normal wav files
     for i in num:
-        directory_normal_6 = f"/home/regis/Desktop/Sound Project/files/{machine}/{dB_level}_dB_{machine}/{machine}/id_0{i}/normal/"
+        directory_normal_6 = f"./data/wav_files/{machine}/{dB_level}_dB_{machine}/{machine}/id_0{i}/normal/"
         for filename in os.listdir(directory_normal_6):
             file = f"{directory_normal_6}{filename}"
             list_normal_6.append(file)
     list_normal_6.sort()
-    #find paths abnormal wav files
+
+    # find paths abnormal wav files
     list_abnormal_6 = []
     num=[0,2,4,6]
     for i in num:
-        directory_abnormal_6 = f"/home/regis/Desktop/Sound Project/files/{machine}/{dB_level}_dB_{machine}/{machine}/id_0{i}/abnormal/"
+        directory_abnormal_6 = f"./data/wav_files/{machine}/{dB_level}_dB_{machine}/{machine}/id_0{i}/abnormal/"
         for filename in os.listdir(directory_abnormal_6):
             file = f"{directory_abnormal_6}{filename}"
             list_abnormal_6.append(file)
     list_abnormal_6.sort()
-    #add normal to df
+
+    # add normal to df
     for wav_file in list_normal_6:
         df = extract_features(wav_file)
         if wav_file == list_normal_6[0]:
-            df.to_csv(f'Librosa_features_{machine}_{dB_level}.csv')
+            df.to_csv(f'./data/created_csv_files/Librosa_features_{machine}_{dB_level}.csv')
         else:
-            df.to_csv(f'Librosa_features_{machine}_{dB_level}.csv', mode='a', header=False)
+            df.to_csv(f'./data/created_csv_files/Librosa_features_{machine}_{dB_level}.csv', mode='a', header=False)
+
     #add abnormal to df
     for wav_file in list_abnormal_6:
         df = extract_features(wav_file)
-        df.to_csv(f'Librosa_features_{machine}_{dB_level}.csv', mode='a', header=False) 
+        df.to_csv(f'./data/created_csv_files/Librosa_features_{machine}_{dB_level}.csv', mode='a', header=False) 
     print("--- %s seconds ---" % (time.time() - start_time))
