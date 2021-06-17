@@ -18,6 +18,7 @@ Your section headers will be used to reference the location of the destination.
 - [How To Use](#how-to-use)
 - [Repo Artitecture](#repo-artitecture)
 - [Next Step](#next-step)
+- [Author Info](#author-info)
 
 ## **Description**
 
@@ -121,6 +122,13 @@ If you run the script and run it to train your ML models and let them make a pre
 
 - Automate downloading and process
 - Add a visual aspects and deploy it
+
+[**↥ Back To The Top**](#table-of-contents)
+
+## **Authors Info**
+
+- Linkedin - [Joren Vervoort](https://www.linkedin.com/in/vervoort-joren/)
+- Github - [Joren Vervoort](https://github.com/Joren-Vervoort)
 
 [**↥ Back To The Top**](#table-of-contents)
 
