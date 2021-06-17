@@ -7,9 +7,11 @@ dB_levels = ["-6", "0", "6"]
 
 # loop to train models
 for machine in machines:
-    for dB_level in dB_levels:
-        create_csv(machine, dB_level)
-
+    
+    #If you want to recreate the .csv files in data/saved_csv_files you should un-comment and run the 2 lines of code below
+    #for dB_level in dB_levels:
+    #   create_csv(machine, dB_level)
+    
     df_merged = concatenate_pd(machine)
     under_sampled_data = undersampling(df_merged)
     X_train, X_test, X_valid, y_train, y_test, y_valid = split_data(under_sampled_data)
