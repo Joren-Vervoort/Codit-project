@@ -1,3 +1,7 @@
+# STATUS: UPDATING AT THIS VERY MOMENT
+
+DATASET: https://zenodo.org/record/3384388#.YMsGz_LiuUk
+
 # Machine conditions monitoring
 
 - Type of challenge: Learning
