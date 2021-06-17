@@ -1,4 +1,4 @@
-<h1 align="center"> <strong>Smart_Assistent</strong> </h1>
+<h1 align="center"> <strong>Mechanical_Breakdown_Prediction</strong> </h1>
 
 | ![](images/sound_waves.png) |
 |:-:|
